@@ -155,7 +155,7 @@ namespace IdentityTodoList.Data.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "TodoItem",
+                name: "TodoItems",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -166,9 +166,9 @@ namespace IdentityTodoList.Data.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_TodoItem", x => x.Id);
+                    table.PrimaryKey("PK_TodoItems", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_TodoItem_AspNetUsers_AuthorId",
+                        name: "FK_TodoItems_AspNetUsers_AuthorId",
                         column: x => x.AuthorId,
                         principalTable: "AspNetUsers",
                         principalColumn: "Id",
@@ -215,8 +215,8 @@ namespace IdentityTodoList.Data.Migrations
                 filter: "[NormalizedUserName] IS NOT NULL");
 
             migrationBuilder.CreateIndex(
-                name: "IX_TodoItem_AuthorId",
-                table: "TodoItem",
+                name: "IX_TodoItems_AuthorId",
+                table: "TodoItems",
                 column: "AuthorId");
         }
 
@@ -238,7 +238,7 @@ namespace IdentityTodoList.Data.Migrations
                 name: "AspNetUserTokens");
 
             migrationBuilder.DropTable(
-                name: "TodoItem");
+                name: "TodoItems");
 
             migrationBuilder.DropTable(
                 name: "AspNetRoles");

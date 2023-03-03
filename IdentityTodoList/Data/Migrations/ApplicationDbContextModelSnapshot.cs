@@ -110,7 +110,7 @@ namespace IdentityTodoList.Data.Migrations
 
                     b.HasIndex("AuthorId");
 
-                    b.ToTable("TodoItem");
+                    b.ToTable("TodoItems");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>

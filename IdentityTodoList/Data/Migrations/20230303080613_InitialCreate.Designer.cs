@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace IdentityTodoList.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20230303065602_InitialCreate")]
+    [Migration("20230303080613_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -112,7 +112,7 @@ namespace IdentityTodoList.Data.Migrations
 
                     b.HasIndex("AuthorId");
 
-                    b.ToTable("TodoItem");
+                    b.ToTable("TodoItems");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>

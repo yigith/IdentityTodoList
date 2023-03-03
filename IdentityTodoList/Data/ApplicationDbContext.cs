@@ -9,5 +9,7 @@ namespace IdentityTodoList.Data
             : base(options)
         {
         }
+
+        public DbSet<TodoItem> TodoItems => Set<TodoItem>();
     }
 }
